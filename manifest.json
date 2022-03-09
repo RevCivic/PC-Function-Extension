@@ -1,0 +1,33 @@
+{
+  "name": "PC Tools",
+  "description": "JavaScript tools to help testing in PC move faster",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts":
+  [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["getRandomAddress.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/gw_icon.png",
+      "32": "/images/gw_icon.png",
+      "48": "/images/gw_icon.png",
+      "128": "/images/gw_icon.png"
+    }
+  },
+  "icons": {
+    "16": "/images/gw_icon.png",
+    "32": "/images/gw_icon.png",
+    "48": "/images/gw_icon.png",
+    "128": "/images/gw_icon.png"
+  },
+  "options_page": "options.html"
+}
